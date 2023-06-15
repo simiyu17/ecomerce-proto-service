@@ -1,0 +1,59 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.0'
+	id 'io.spring.dependency-management' version '1.1.0'
+	id 'com.google.protobuf' version '0.9.1'
+}
+
+group = 'com.ecomerce.grpc.code'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	grpcVersion='1.56.0'
+	protobufVersion='3.22.3'
+}
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	runtimeOnly "io.grpc:grpc-netty-shaded:${grpcVersion}"
+	implementation "io.grpc:grpc-protobuf:${grpcVersion}"
+	implementation "io.grpc:grpc-stub:${grpcVersion}"
+	compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+protobuf {
+	protoc {
+		artifact = "com.google.protobuf:protoc:${protobufVersion}"
+	}
+	plugins {
+		grpc {
+			artifact = "io.grpc:protoc-gen-grpc-java:${grpcVersion}"
+		}
+	}
+	generateProtoTasks {
+		all()*.plugins {
+			grpc {}
+		}
+	}
+}
+
+sourceSets {
+	main {
+		java {
+			srcDirs 'build/generated/source/proto/main/grpc'
+			srcDirs 'build/generated/source/proto/main/java'
+		}
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

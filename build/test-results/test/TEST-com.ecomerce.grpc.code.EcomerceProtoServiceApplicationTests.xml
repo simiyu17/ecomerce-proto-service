@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ecomerce.grpc.code.EcomerceProtoServiceApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-15T14:09:22" hostname="simiyu-5379" time="0.663">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.ecomerce.grpc.code.EcomerceProtoServiceApplicationTests" time="0.663"/>
+  <system-out><![CDATA[17:09:20.649 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ecomerce.grpc.code.EcomerceProtoServiceApplicationTests]: EcomerceProtoServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:09:20.751 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ecomerce.grpc.code.EcomerceProtoServiceApplication for test class com.ecomerce.grpc.code.EcomerceProtoServiceApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2023-06-15T17:09:21.145+03:00  INFO 53463 --- [    Test worker] g.c.EcomerceProtoServiceApplicationTests : Starting EcomerceProtoServiceApplicationTests using Java 17.0.6 with PID 53463 (started by simiyu in /home/simiyu/simiyu/projects/web/ecomerce-proto-service)
+2023-06-15T17:09:21.148+03:00  INFO 53463 --- [    Test worker] g.c.EcomerceProtoServiceApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2023-06-15T17:09:22.153+03:00  INFO 53463 --- [    Test worker] g.c.EcomerceProtoServiceApplicationTests : Started EcomerceProtoServiceApplicationTests in 1.242 seconds (process running for 2.285)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
